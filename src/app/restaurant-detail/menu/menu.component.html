@@ -1,0 +1,12 @@
+<!--INÍCIO DO MENU -->
+<div class="col-md-9 col-xs-12">
+
+  <mt-menu-item *ngFor="let item of menu | async" [menuItem]="item" (add)="shoppingCart.addItem($event)"></mt-menu-item>
+  <!-- /.info-box -->                                              <!--/\ esse comandos acima: foram recebidos do menu-item/ Passando o evento para o Service -->
+
+</div>
+<div class="col-md-3 col-xs-12">
+  <mt-shopping-cart #shoppingCart></mt-shopping-cart>
+  <!-- para ter acesso aos metodos do shoppingCart é nessario declacar no template-->
+</div>
+<!-- FIM DO MENU -->

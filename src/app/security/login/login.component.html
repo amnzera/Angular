@@ -1,0 +1,33 @@
+  <div class="content-wrapper" [@showLogin]="showLogin">
+    <div class="container">
+
+      <!-- INÍCIO DO CONTEÚDO -->
+      <section class="content login-content" style="margin: 10% auto">
+        <div class="login-logo">
+          <b>MEAT</b> | Login
+        </div>
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 login-box-body">
+          <p class="login-box-msg">Por favor, efetue o login para continuar</p>
+
+          <form [formGroup]="loginForm"> <!--Atribui o formulário ao FormGroup object-->
+            <mt-input-container [showTip]="false"><!--Passando false para a variavel do componente inputContainer-->
+              <input type="text" formControlName="email" class="form-control" placeholder="Email"> <!--formControlName é o identificador do input-->
+              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </mt-input-container>
+            <mt-input-container [showTip]="false">
+              <input type="password" formControlName="password" class="form-control" placeholder="Password">
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </mt-input-container>
+            <div class="row">
+              <!-- /.col -->
+              <div class="col-xs-offset-4 col-xs-4">
+                <button (click)="login()" [disabled]="loginForm.invalid" type="submit" class="btn btn-primary btn-block btn-flat btn-lg">Entrar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- FIM DO CONTEÚDO -->
+    </div>
+    <!-- /.container -->
+  </div>

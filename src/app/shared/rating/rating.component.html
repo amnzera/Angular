@@ -1,0 +1,5 @@
+<i *ngFor="let r of rates" class="fa"
+    [class.fa-star]="r <= rate" [class.fa-star-o]="r > rate"
+    (click)="setRate(r)"
+    (mouseenter)="setTemp(r)"
+    (mouseleave)="clearTemp()"></i><!-- Muda class dependendo da condição/Mouseenter e leave agem como o Rouver do css-->
