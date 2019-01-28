@@ -9,6 +9,7 @@ import {decoratorArgument} from "codelyzer/util/astQuery";
 @Injectable() // permite injetar funções do proprio angular no seu projeto...nesse caso é o serviço http do angular
 export class RestaurantsService {
 
+
     constructor(private http: HttpClient) {}
 
     restaurants(search?: string): Observable<Restaurant[]> { // quem chamar essa func deve retornar um observable array tipo Restaurant...search? é opcional
